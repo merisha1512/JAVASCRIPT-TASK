@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formula</title>
+    </head>
+    <body>
+       <button type="button" onclick="formula(2,3)">First</button><br><br>
+       <button type="button" onclick="formula1(2,3)">Second</button><br><br>
+       <button type="button" onclick="formula2(2,3)">Third</button><br><br>
+       <button type="button" onclick="formula3(2,3,4)">Fourth</button>
+        <script>
+            function formula(a,b){
+                var left=(a+b)**2;
+                var right=(a**2+b**2+2*a*b);
+                console.log((left==right)?"LHS=RHS (a+b)**2=a**2+b**2+2*a*b" : "LHS!=RHS");
+            }
+            function formula1(a,b){
+                var left1=(a-b)**2;
+                var right1=(a**2+b**2-2*a*b);
+                console.log((left1==right1)?"LHS=RHS (a+b)**2=a**2+b**2-2*a*b" : "LHS!=RHS");
+            }
+            function formula2(a,b){
+                var left2=(a**2-b**2);
+                var right2=((a+b)*(a-b));
+                console.log((left2==right2)?"LHS=RHS (a**2-b**2)=(a+b)*(a-b)":"LHS!=RHS");
+            }
+            function formula3(a,b,c){
+                var left3=(a+b-c)**2;
+                var right3=(a**2+b**2+c**2+2*a*b-2*b*c-2*c*a);
+                console.log((left3==right3)?"LHS=RHS (a+b-c)**2=a**2+b**2+2*a*b-2*b*c-2*c*a":"LHS!=RHS");
+            }
+        </script>
+    </body>
+</html>
